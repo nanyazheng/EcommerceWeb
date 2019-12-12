@@ -28,7 +28,7 @@ mongoose
 // middlewares
 app.use(morgan("dev"));
 app.use(bodyParser.json());
-app.use(cookieParser());
+app.use(cookieParser({ secret: 'keyboard cat'}));
 app.use(expressValidator());
 app.use(cors());
 
